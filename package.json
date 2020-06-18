@@ -29,9 +29,9 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "tslib",
+  "name": "yhattmtslib",
   "author": "Ben",
-  "module": "dist/tslib.esm.js",
+  "module": "dist/yhattmtslib.esm.js",
   "devDependencies": {
     "@types/cheerio": "^0.22.18",
     "@types/speakeasy": "^2.0.5",
