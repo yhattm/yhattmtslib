@@ -13,4 +13,9 @@ describe('invest', () => {
       expect(res.call).toBeGreaterThan(0);
     }
   });
+  it('GetExchanges', async () => {
+    const res = await invest.GetExchanges();
+    console.log(res);
+    expect(res[0].price).toBeGreaterThan(0);
+  });
 });
