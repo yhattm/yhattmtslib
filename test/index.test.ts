@@ -1,4 +1,4 @@
-import { invest, bus } from '../src';
+import { invest, bus, gas } from '../src';
 
 describe('bus', () => {
   it('ToCompany', async () => {
@@ -29,5 +29,12 @@ describe('invest', () => {
     const res = await invest.GetGold();
     console.log(res);
     expect(res.price).toBeGreaterThan(0);
+  });
+});
+
+describe('gas', () => {
+  it('GetPrice', async () => {
+    const res = await gas.GetPrice();
+    console.log(res);
   });
 });
