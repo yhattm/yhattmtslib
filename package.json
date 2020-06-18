@@ -33,9 +33,14 @@
   "author": "Ben",
   "module": "dist/tslib.esm.js",
   "devDependencies": {
+    "@types/cheerio": "^0.22.18",
     "husky": "^4.2.5",
     "tsdx": "^0.13.2",
     "tslib": "^2.0.0",
     "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "node-fetch": "3.0.0-beta.7"
   }
 }
