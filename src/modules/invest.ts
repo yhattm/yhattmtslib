@@ -144,6 +144,32 @@ const GetExchanges = async () => {
 
   return exchanges;
 };
+const GetGold = async () => {
+  const config = await getConfig();
+  const res = await fetch(
+    'https://ibank.firstbank.com.tw/NetBank/7/1501.html?sh=none'
+  );
+  const body = await res.text();
+  const $ = cheerio.load(body);
+  var selectorPrice = $('td[class="ListTitleFont"]');
+  //console.log($(selectorPrice[2]).text())
+  //console.log($(selectorPrice[3]).text())
 
-const invest = { GetStock, GetOption, GetExchanges };
+  const gold = {
+    price: config.gold.price,
+    buy: parseFloat(
+      $(selectorPrice[2])
+        .text()
+        .replace(',', '')
+    ),
+    sell: parseFloat(
+      $(selectorPrice[3])
+        .text()
+        .replace(',', '')
+    ),
+  };
+  return gold;
+};
+
+const invest = { GetStock, GetOption, GetExchanges, GetGold };
 export default invest;

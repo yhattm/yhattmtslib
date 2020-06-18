@@ -18,4 +18,9 @@ describe('invest', () => {
     console.log(res);
     expect(res[0].price).toBeGreaterThan(0);
   });
+  it('GetGold', async () => {
+    const res = await invest.GetGold();
+    console.log(res);
+    expect(res.price).toBeGreaterThan(0);
+  });
 });
