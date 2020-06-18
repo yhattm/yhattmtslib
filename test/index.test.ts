@@ -1,4 +1,11 @@
-import { invest } from '../src';
+import { invest, bus } from '../src';
+
+describe('bus', () => {
+  it('ToCompany', async () => {
+    const res = await bus.ToCompany();
+    console.log(res);
+  });
+});
 
 describe('invest', () => {
   it('GetStock', async () => {
