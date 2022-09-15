@@ -1,5 +1,4 @@
 import fetch from 'node-fetch';
-
 const httpGet = async (url: string) => {
   const res = await fetch(url);
   const resJSON = await res.json();
@@ -20,40 +19,40 @@ const ToCompany = async () => {
     bus921,
     bus950,
   ]: [any, any, any, any, any, any, any, any, any, any, any] = [
-    await httpGet(
-      'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16468&sec=1'
-    ),
-    await httpGet(
-      'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=15562&sec=1'
-    ),
-    await httpGet(
-      'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=15561&sec=1'
-    ),
-    await httpGet(
-      'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=10173&sec=1'
-    ),
-    await httpGet(
-      'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16581&sec=1'
-    ),
-    await httpGet(
-      'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=15563&sec=1'
-    ),
-    await httpGet(
-      'http://routes.5284.com.tw/ntpcebus/Js/RouteInfo?rid=16689&sec=1'
-    ),
-    await httpGet(
-      'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16691&sec=0'
-    ),
-    await httpGet(
-      'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16585&sec=1'
-    ),
-    await httpGet(
-      'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16664&sec=1'
-    ),
-    await httpGet(
-      'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=17390&sec=1'
-    ),
-  ];
+      await httpGet(
+        'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16468&sec=1'
+      ),
+      await httpGet(
+        'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=15562&sec=1'
+      ),
+      await httpGet(
+        'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=15561&sec=1'
+      ),
+      await httpGet(
+        'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=10173&sec=1'
+      ),
+      await httpGet(
+        'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16581&sec=1'
+      ),
+      await httpGet(
+        'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=15563&sec=1'
+      ),
+      await httpGet(
+        'http://routes.5284.com.tw/ntpcebus/Js/RouteInfo?rid=16689&sec=1'
+      ),
+      await httpGet(
+        'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16691&sec=0'
+      ),
+      await httpGet(
+        'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16585&sec=1'
+      ),
+      await httpGet(
+        'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16664&sec=1'
+      ),
+      await httpGet(
+        'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=17390&sec=1'
+      ),
+    ];
   let to = {
     bus57: bus57.Etas[16],
     bus214d: bus214d.Etas[24],
@@ -102,40 +101,40 @@ const FromCompany = async () => {
     bus921,
     bus950,
   ]: [any, any, any, any, any, any, any, any, any, any, any] = [
-    await httpGet(
-      'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16468&sec=0'
-    ),
-    await httpGet(
-      'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=15562&sec=0'
-    ),
-    await httpGet(
-      'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=15561&sec=0'
-    ),
-    await httpGet(
-      'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=10173&sec=0'
-    ),
-    await httpGet(
-      'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16581&sec=0'
-    ),
-    await httpGet(
-      'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=15563&sec=0'
-    ),
-    await httpGet(
-      'http://routes.5284.com.tw/ntpcebus/Js/RouteInfo?rid=16689&sec=0'
-    ),
-    await httpGet(
-      'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16691&sec=1'
-    ),
-    await httpGet(
-      'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16585&sec=0'
-    ),
-    await httpGet(
-      'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16664&sec=0'
-    ),
-    await httpGet(
-      'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=17390&sec=0'
-    ),
-  ];
+      await httpGet(
+        'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16468&sec=0'
+      ),
+      await httpGet(
+        'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=15562&sec=0'
+      ),
+      await httpGet(
+        'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=15561&sec=0'
+      ),
+      await httpGet(
+        'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=10173&sec=0'
+      ),
+      await httpGet(
+        'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16581&sec=0'
+      ),
+      await httpGet(
+        'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=15563&sec=0'
+      ),
+      await httpGet(
+        'http://routes.5284.com.tw/ntpcebus/Js/RouteInfo?rid=16689&sec=0'
+      ),
+      await httpGet(
+        'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16691&sec=1'
+      ),
+      await httpGet(
+        'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16585&sec=0'
+      ),
+      await httpGet(
+        'http://routes.ntpc.com.tw/ntpcebus/Js/RouteInfo?rid=16664&sec=0'
+      ),
+      await httpGet(
+        'http://www.e-bus.taipei.gov.tw/newmap/Js/RouteInfo?rid=17390&sec=0'
+      ),
+    ];
 
   let from = {
     bus57: bus57.Etas[21],
