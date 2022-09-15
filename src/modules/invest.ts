@@ -72,70 +72,70 @@ const GetExchanges = async () => {
   const exchanges = [
     {
       currency: 'USD',
-      price: config.exchanges.filter((ex: any) => ex.currency == 'USD')[0]
+      price: config.exchanges.filter((ex: any) => ex.currency === 'USD')[0]
         .price,
       buy: parseFloat($(selectorPrice[3]).text()),
       sell: parseFloat($(selectorPrice[4]).text()),
     },
     {
       currency: 'GBP',
-      price: config.exchanges.filter((ex: any) => ex.currency == 'GBP')[0]
+      price: config.exchanges.filter((ex: any) => ex.currency === 'GBP')[0]
         .price,
       buy: parseFloat($(selectorPrice[13]).text()),
       sell: parseFloat($(selectorPrice[14]).text()),
     },
     {
       currency: 'AUD',
-      price: config.exchanges.filter((ex: any) => ex.currency == 'AUD')[0]
+      price: config.exchanges.filter((ex: any) => ex.currency === 'AUD')[0]
         .price,
       buy: parseFloat($(selectorPrice[33]).text()),
       sell: parseFloat($(selectorPrice[34]).text()),
     },
     {
       currency: 'CAD',
-      price: config.exchanges.filter((ex: any) => ex.currency == 'CAD')[0]
+      price: config.exchanges.filter((ex: any) => ex.currency === 'CAD')[0]
         .price,
       buy: parseFloat($(selectorPrice[53]).text()),
       sell: parseFloat($(selectorPrice[54]).text()),
     },
     {
       currency: 'JPY',
-      price: config.exchanges.filter((ex: any) => ex.currency == 'JPY')[0]
+      price: config.exchanges.filter((ex: any) => ex.currency === 'JPY')[0]
         .price,
       buy: parseFloat($(selectorPrice[63]).text()),
       sell: parseFloat($(selectorPrice[64]).text()),
     },
     {
       currency: 'ZAR',
-      price: config.exchanges.filter((ex: any) => ex.currency == 'ZAR')[0]
+      price: config.exchanges.filter((ex: any) => ex.currency === 'ZAR')[0]
         .price,
       buy: parseFloat($(selectorPrice[73]).text()),
       sell: parseFloat($(selectorPrice[74]).text()),
     },
     {
       currency: 'NZD',
-      price: config.exchanges.filter((ex: any) => ex.currency == 'NZD')[0]
+      price: config.exchanges.filter((ex: any) => ex.currency === 'NZD')[0]
         .price,
       buy: parseFloat($(selectorPrice[88]).text()),
       sell: parseFloat($(selectorPrice[89]).text()),
     },
     {
       currency: 'EUR',
-      price: config.exchanges.filter((ex: any) => ex.currency == 'EUR')[0]
+      price: config.exchanges.filter((ex: any) => ex.currency === 'EUR')[0]
         .price,
       buy: parseFloat($(selectorPrice[93]).text()),
       sell: parseFloat($(selectorPrice[94]).text()),
     },
     {
       currency: 'CNY',
-      price: config.exchanges.filter((ex: any) => ex.currency == 'CNY')[0]
+      price: config.exchanges.filter((ex: any) => ex.currency === 'CNY')[0]
         .price,
       buy: parseFloat($(selectorPrice[103]).text()),
       sell: parseFloat($(selectorPrice[104]).text()),
     },
     {
       currency: 'TRY',
-      price: config.exchanges.filter((ex: any) => ex.currency == 'TRY')[0]
+      price: config.exchanges.filter((ex: any) => ex.currency === 'TRY')[0]
         .price,
       buy: parseFloat($(selectorPrice[113]).text()),
       sell: parseFloat($(selectorPrice[114]).text()),
