@@ -1,4 +1,4 @@
-import { invest, gas, token } from '../src';
+import { invest, gas } from '../src';
 
 describe('invest', () => {
   it('GetStock', async () => {
@@ -28,13 +28,6 @@ describe('invest', () => {
 describe('gas', () => {
   it('GetPrice', async () => {
     const res = await gas.GetPrice();
-    console.log(res);
-  });
-});
-
-describe('token', () => {
-  it('GetAWS', async () => {
-    const res = await token.GetAWS();
     console.log(res);
   });
 });
