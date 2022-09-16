@@ -1,22 +1,12 @@
-import fetch from 'node-fetch';
-import cheerio from 'cheerio';
-
-const getConfig = async () => {
-  const res = await fetch(
-    'https://docs.google.com/document/export?format=txt&id=1SWsU4Dv93oqN67IuVAa9W8Qh75GeNWgA8C3MUKMOfLQ&token=AC4w5VgI0vCcwM4qgBYm5QHFEE3upEWAgQ%3A1540802477358&includes_info_params=true'
-  );
-  const text = await res.text();
-  const cutText = text.substring(1, text.length);
-  const jsonObject = JSON.parse(cutText);
-  return jsonObject;
-};
+import fetch from '../fetch'
+import * as cheerio from 'cheerio';
+const configJson = require('../config/config.json')
 
 const GetStock = async () => {
   const res = await fetch(
     'https://tw.screener.finance.yahoo.net/future/aa03?fumr=futurepart&opmr=optionpart&random=0.6297693371261759'
   );
-  const body = await res.text();
-  const $ = cheerio.load(body);
+  const $ = cheerio.load(res);
   const selectorPrice = $('td');
   let price = { FIMTX1: 0, FIMTX2: 0, FIMTXDiff: 0 };
   price.FIMTX1 = parseFloat(
@@ -40,8 +30,7 @@ const GetOption = async (query: { date: string; target: string }) => {
       date +
       '&random=0.6297693371261759'
   );
-  const body = await res.text();
-  const $ = cheerio.load(body);
+  const $ = cheerio.load(res);
   const callPrice = $("td:contains('" + target + "')")
     .prev()
     .prev()
@@ -60,12 +49,11 @@ const GetOption = async (query: { date: string; target: string }) => {
 };
 
 const GetExchanges = async () => {
-  const config = await getConfig();
+  const config = configJson;
   const res = await fetch(
     'https://ibank.firstbank.com.tw/NetBank/7/0201.html?sh=none'
   );
-  const body = await res.text();
-  const $ = cheerio.load(body);
+  const $ = cheerio.load(res);
 
   const selectorPrice = $('td[class="ListTitleFont"]');
 
@@ -145,12 +133,11 @@ const GetExchanges = async () => {
   return exchanges;
 };
 const GetGold = async () => {
-  const config = await getConfig();
+  const config = configJson;
   const res = await fetch(
     'https://ibank.firstbank.com.tw/NetBank/7/1501.html?sh=none'
   );
-  const body = await res.text();
-  const $ = cheerio.load(body);
+  const $ = cheerio.load(res);
   var selectorPrice = $('td[class="ListTitleFont"]');
   //console.log($(selectorPrice[2]).text())
   //console.log($(selectorPrice[3]).text())

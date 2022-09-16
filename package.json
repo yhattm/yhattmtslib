@@ -42,6 +42,5 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
     "speakeasy": "^2.0.0"
-  },
-  "type": "module"
+  }
 }

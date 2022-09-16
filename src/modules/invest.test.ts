@@ -7,7 +7,7 @@ describe('invest', () => {
     expect(res.FIMTX1).toBeGreaterThan(0);
   });
   it('GetOption', async () => {
-    const res = await invest.GetOption({ date: '202006', target: '11500' });
+    const res = await invest.GetOption({ date: '202209', target: '14500' });
     console.log(res);
     if (res) {
       expect(res.call).toBeGreaterThan(0);
