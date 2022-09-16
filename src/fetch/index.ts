@@ -8,7 +8,6 @@ const fetch = (url: string) => {
                 body = body + String(chunk);
             })
             res.on('end', () => {
-                console.log(body)
                 resolve(body)
             })
         })
