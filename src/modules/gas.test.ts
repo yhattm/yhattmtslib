@@ -1,6 +1,4 @@
-
 import gas from './gas';
-
 
 describe('gas', () => {
   it('GetPrice', async () => {

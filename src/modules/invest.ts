@@ -1,6 +1,6 @@
-import fetch from '../fetch'
+import fetch from '../fetch';
 import * as cheerio from 'cheerio';
-const configJson = require('../config/config.json')
+const configJson = require('../config/config.json');
 
 const GetStock = async () => {
   const res = await fetch(

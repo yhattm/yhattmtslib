@@ -1,8 +1,8 @@
-import fetch from '../fetch'
+import fetch from '../fetch';
 import * as cheerio from 'cheerio';
 
 const GetPrice = async () => {
-  const res = await fetch('https://m.gas.goodlife.tw')
+  const res = await fetch('https://m.gas.goodlife.tw');
   const $ = cheerio.load(res);
   var date = $('p', '#gas-price');
   var gasPrice = $('h2', '#gas-price');
