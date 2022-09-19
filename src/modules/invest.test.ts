@@ -14,11 +14,13 @@ describe('invest', () => {
     }
   });
   it('GetExchanges', async () => {
+    jest.setTimeout(10000);
     const res = await invest.GetExchanges();
     console.log(res);
     expect(res[0].price).toBeGreaterThan(0);
   });
   it('GetGold', async () => {
+    jest.setTimeout(10000);
     const res = await invest.GetGold();
     console.log(res);
     expect(res.price).toBeGreaterThan(0);
