@@ -10,4 +10,15 @@ const SetLow = (pin: number) => {
     led.writeSync(Gpio.LOW)
 }
 
-export const GPIO = { SetHigh, SetLow }
+function delay(time: number) {
+    return new Promise(resolve => setTimeout(resolve, time));
+}
+
+const SetHighToLow = async (pin: number, time: number) => {
+    const led = new Gpio(pin, 'out');
+    led.writeSync(Gpio.HIGH)
+    await delay(time)
+    led.writeSync(Gpio.LOW)
+}
+
+export const GPIO = { SetHigh, SetLow, SetHighToLow }
