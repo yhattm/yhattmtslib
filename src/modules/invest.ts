@@ -27,8 +27,8 @@ const GetOption = async (query: { date: string; target: string }) => {
   const { date, target } = query;
   const res = await fetch(
     'https://tw.screener.finance.yahoo.net/future/aa03?fumr=futurepart&opmr=optionpart&opym=' +
-    date +
-    '&random=0.6297693371261759'
+      date +
+      '&random=0.6297693371261759'
   );
   const $ = cheerio.load(res);
   const callPrice = $("td:contains('" + target + "')")
