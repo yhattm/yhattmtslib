@@ -1,4 +1,4 @@
-{
+const JsonStr = {
     "options": [
         {
             "date": "202003",
@@ -63,3 +63,5 @@
         "price": 1430
     }
 }
+
+export const configJson = JSON.parse(JsonStr)
