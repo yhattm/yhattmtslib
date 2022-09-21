@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index index 1`] = `
+Object {
+  "gas": Object {
+    "GetPrice": [Function],
+  },
+  "gpio": Object {
+    "setHigh": [Function],
+    "setHighToLow": [Function],
+    "setLow": [Function],
+  },
+  "invest": Object {
+    "GetExchanges": [Function],
+    "GetGold": [Function],
+    "GetOption": [Function],
+    "GetStock": [Function],
+  },
+  "mqtt": Object {
+    "connect": [Function],
+  },
+  "token": Object {
+    "getAWS": [Function],
+  },
+}
+`;
