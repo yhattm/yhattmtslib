@@ -1,7 +1,7 @@
 import mqtt from 'mqtt';
 
 const connect = (url: string) => {
-    return mqtt.connect(url)
-}
+  return mqtt.connect(url);
+};
 
-export const mqttcli = { connect }
+export const mqttcli = { connect };
