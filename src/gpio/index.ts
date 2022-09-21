@@ -23,4 +23,4 @@ const setHighToLow = async (pin: number, time: number) => {
   console.log('Set low');
 };
 
-export const GPIO = { setHigh, setLow, setHighToLow };
+export const gpio = { setHigh, setLow, setHighToLow };
