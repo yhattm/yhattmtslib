@@ -1,4 +1,4 @@
-import mqtt from 'mqtt';
+import * as mqtt from 'mqtt';
 
 const connect = (url: string) => {
   return mqtt.connect(url);
