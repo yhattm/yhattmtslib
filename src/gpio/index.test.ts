@@ -1,9 +1,9 @@
-import { GPIO } from './index';
+import { gpio } from './index';
 
 describe('index', () => {
   it('index', async () => {
     try {
-      await GPIO.setHighToLow(14, 1000);
+      await gpio.setHighToLow(14, 1000);
     } catch (error) {
       console.log(error);
     }
